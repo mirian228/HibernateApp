@@ -22,8 +22,8 @@ public class App {
 		try {
 			// Transaction Beginning
 			session.beginTransaction();
-				
-			List<Person> people = session.createQuery("FROM Person").getResultList();
+			// Get person from db whose name starts with 'T'	
+			List<Person> people = session.createQuery("FROM Person where name Like 'T%'").getResultList();
 			for (int i = 0; i < people.size(); i++) {
 				System.out.println(people.get(i));
 			}
