@@ -23,10 +23,8 @@ public class App {
 			// Transaction Beginning
 			session.beginTransaction();
 			// Get person from db whose name starts with 'T'	
-			List<Person> people = session.createQuery("FROM Person where name Like 'T%'").getResultList();
-			for (int i = 0; i < people.size(); i++) {
-				System.out.println(people.get(i));
-			}
+			session.createQuery("update Person set name='Test' where age < 30").executeUpdate();
+			
 			
 			// Committing changes from cache
 			session.getTransaction().commit();
