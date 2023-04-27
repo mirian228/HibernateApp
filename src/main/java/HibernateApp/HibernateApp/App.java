@@ -1,7 +1,5 @@
 package HibernateApp.HibernateApp;
 
-import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -23,7 +21,7 @@ public class App {
 			// Transaction Beginning
 			session.beginTransaction();
 			// Get person from db whose name starts with 'T'	
-			session.createQuery("update Person set name='Test' where age < 30").executeUpdate();
+			session.createQuery("delete from Person where age < 30").executeUpdate();
 			
 			
 			// Committing changes from cache
