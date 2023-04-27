@@ -23,11 +23,16 @@ public class App {
 			
 			
 			Person person = session.get(Person.class, 2);
-			session.delete(person);
+			Person person1 = new Person("Some name ", 60);
 			
+			session.save(person1);
+			
+		
 			
 			// Committing changes from cache
 			session.getTransaction().commit();
+			// We can get id of person from database via hibernate after committing
+			System.out.println(person1.getId());
 		} finally {
 			// Closing session factory
 			sessionFactory.close();
