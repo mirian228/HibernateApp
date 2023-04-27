@@ -1,5 +1,7 @@
 package HibernateApp.HibernateApp;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -20,19 +22,16 @@ public class App {
 		try {
 			// Transaction Beginning
 			session.beginTransaction();
-			
-			
-			Person person = session.get(Person.class, 2);
-			Person person1 = new Person("Some name ", 60);
-			
-			session.save(person1);
-			
-		
+				
+			List<Person> people = session.createQuery("FROM Person").getResultList();
+			for (int i = 0; i < people.size(); i++) {
+				System.out.println(people.get(i));
+			}
 			
 			// Committing changes from cache
 			session.getTransaction().commit();
 			// We can get id of person from database via hibernate after committing
-			System.out.println(person1.getId());
+			
 		} finally {
 			// Closing session factory
 			sessionFactory.close();
