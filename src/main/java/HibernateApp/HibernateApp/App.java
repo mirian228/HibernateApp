@@ -20,10 +20,17 @@ public class App {
 		try {
 			// Transaction Beginning
 			session.beginTransaction();
-			// Getting person with id=1 from database
-			Person person = session.get(Person.class, 1);
-			System.out.println(person.getName());
-			System.out.println(person.getAge());
+			Person person1 = new Person("Test1", 30);
+			Person person2	= new Person("Test2", 40);
+			Person person3 = new Person("Test3", 50);
+			
+			
+			session.save(person1);
+			session.save(person2);
+			session.save(person3);
+			
+			
+			
 			// Committing changes from cache
 			session.getTransaction().commit();
 		} finally {
