@@ -23,8 +23,7 @@ public class App {
 			
 			
 			Person person = session.get(Person.class, 2);
-			person.setName("New name");
-			
+			session.delete(person);
 			
 			
 			// Committing changes from cache
