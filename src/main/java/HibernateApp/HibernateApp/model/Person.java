@@ -1,5 +1,6 @@
 package HibernateApp.HibernateApp.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -26,7 +27,7 @@ public class Person {
 	private int age;
 
 	@OneToMany(mappedBy = "owner")
-	@Cascade(CascadeType.SAVE_UPDATE) // This annotation allows save method to be cascaded
+	@Cascade({CascadeType.SAVE_UPDATE }) // This annotation allows save method to be cascaded
 	private List<Item> items;
 
 	public Person() {
@@ -78,6 +79,16 @@ public class Person {
 		this.age = age;
 	}
 
+	public void addItem(Item item) {
+		if (this.items == null) {
+			this.items = new ArrayList<>();
+		}
+		
+		this.items.add(item);
+		item.setOwner(this);
+	}
+	
+	
 	@Override
 	public String toString() {
 		return "Person [id=" + id + ", name=" + name + ", age=" + age + "]";

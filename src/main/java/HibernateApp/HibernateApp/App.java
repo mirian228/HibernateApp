@@ -1,8 +1,5 @@
 package HibernateApp.HibernateApp;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -31,10 +28,10 @@ public class App {
 			session.beginTransaction();
 
 			Person person = new Person("Test cascading", 30);
-
-			Item item = new Item("Test cascading item", person);
-
-			person.setItems(new ArrayList<>(Collections.singletonList(item)));
+			person.addItem(new Item("Test cascading item1"));
+			person.addItem(new Item("Test cascading item2"));
+			person.addItem(new Item("Test cascading item3"));
+		
 
 			session.save(person);
 

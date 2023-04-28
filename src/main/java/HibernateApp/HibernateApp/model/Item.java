@@ -28,6 +28,11 @@ public class Item {
 		super();
 	}
 
+	public Item(String itemName) {
+		super();
+		this.itemName = itemName;
+	}
+
 	public Item(int id, String itemName) {
 		super();
 		this.id = id;
