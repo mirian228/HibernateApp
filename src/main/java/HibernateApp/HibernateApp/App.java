@@ -33,12 +33,11 @@ public class App {
 			// Transaction Beginning
 			session.beginTransaction();
 			
-			Principal principal = new Principal("Gio", 22);
-			School school = new School(1500, principal);
+			School school = session.get(School.class, 2);
+			Principal principal = new Principal("Changed Principal", 35);
 			session.save(principal);
+			school.setPrincipal(principal);
 			session.save(school);
-			
-			
 			
 			// Committing changes from cache
 			session.getTransaction().commit();
