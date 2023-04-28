@@ -9,6 +9,8 @@ import HibernateApp.HibernateApp.model.Item;
 import HibernateApp.HibernateApp.model.Movie;
 import HibernateApp.HibernateApp.model.Passport;
 import HibernateApp.HibernateApp.model.Person;
+import HibernateApp.HibernateApp.model.Principal;
+import HibernateApp.HibernateApp.model.School;
 
 public class App {
 	public static void main(String[] args) {
@@ -20,6 +22,8 @@ public class App {
 		configuration.addAnnotatedClass(Movie.class);
 		configuration.addAnnotatedClass(Director.class);
 		configuration.addAnnotatedClass(Passport.class);
+		configuration.addAnnotatedClass(Principal.class);
+		configuration.addAnnotatedClass(School.class);
 		// Building session factory
 		SessionFactory sessionFactory = configuration.buildSessionFactory();
 		// Getting session
@@ -29,12 +33,8 @@ public class App {
 			// Transaction Beginning
 			session.beginTransaction();
 
-			Person person = new Person("Test person", 50);
-			Passport passport = new Passport(12345);
-			
-			person.setPassport(passport);
-
-			session.save(person);
+			Principal principal = session.get(Principal.class, 1);
+			System.out.println(principal);
 
 			// Committing changes from cache
 			session.getTransaction().commit();
