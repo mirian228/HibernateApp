@@ -1,7 +1,15 @@
-DELETE FROM Person;
+INSERT INTO Person(name, age) VALUES('Tom', 35);
+INSERT INTO Person(name, age) VALUES('Bob', 52);
+INSERT INTO Person(name, age) VALUES('Katy', 14);
+
+
+INSERT INTO Item(person_id, item_name) VALUES(1, 'Book');
+INSERT INTO Item(person_id, item_name) VALUES(1, 'AirPods');
+INSERT INTO Item(person_id, item_name) VALUES(2, 'Iphone');
+INSERT INTO Item(person_id, item_name) VALUES(3, 'Kindle');
+INSERT INTO Item(person_id, item_name) VALUES(3, 'TV');
+INSERT INTO Item(person_id, item_name) VALUES(3, 'PlayStation');
+
+
 SELECT * FROM Person;
-INSERT INTO Person(name, age) VALUES('Tom', 20);
-INSERT INTO Person(name, age) VALUES('Test1', 30);
-INSERT INTO Person(name, age) VALUES('Mike', 35);
-INSERT INTO Person(name, age) VALUES('John', 50);
-INSERT INTO Person(name, age) VALUES('Katy', 18);
+SELECT * FROM Item;
