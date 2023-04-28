@@ -30,10 +30,12 @@ public class App {
 			// Transaction Beginning
 			session.beginTransaction();
 			
-			Movie movie = session.get(Movie.class, 1);
-			Director director = session.get(Director.class, 2);
-			movie.setDirector(director);
-			session.save(movie);
+			Director director = session.get(Director.class, 1);
+			
+			Movie movie = session.get(Movie.class, 2);
+			
+			
+			
 			
 			// Committing changes from cache
 			session.getTransaction().commit();

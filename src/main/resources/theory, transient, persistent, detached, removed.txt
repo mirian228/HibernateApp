@@ -1,0 +1,7 @@
+First, the detached object was associated with Hibernate session in past and it has representation in the database, on the other hand, the Transient object is never associated with hibernate and it doesn't have any representation in the database.
+
+But, both can be moved to Persistent state by associating them with session e.g. you can move an entity from transient to persistent state by calling Session.save() method.
+
+Similarly, you can move a detached entity to Persistent state by calling Session.update() or Session.saveOrUpdate(), or Session.merge() methods.
+
+Read more: https://javarevisited.blogspot.com/2017/04/difference-between-transient-persistent-and-detached-state-hibernate-java.html#ixzz80B0AqcWS
