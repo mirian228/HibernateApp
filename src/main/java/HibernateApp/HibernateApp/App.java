@@ -1,10 +1,14 @@
 package HibernateApp.HibernateApp;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import HibernateApp.HibernateApp.model.Director;
 import HibernateApp.HibernateApp.model.Item;
+import HibernateApp.HibernateApp.model.Movie;
 import HibernateApp.HibernateApp.model.Person;
 
 public class App {
@@ -14,6 +18,8 @@ public class App {
 		// Added class for hibernate to see
 		configuration.addAnnotatedClass(Person.class);
 		configuration.addAnnotatedClass(Item.class);
+		configuration.addAnnotatedClass(Movie.class);
+		configuration.addAnnotatedClass(Director.class);
 		// Building session factory
 		SessionFactory sessionFactory = configuration.buildSessionFactory();
 		// Getting session
@@ -23,9 +29,10 @@ public class App {
 			// Transaction Beginning
 			session.beginTransaction();
 
-			Person person = session.get(Person.class, 2);
-			session.remove(person);
-			person.getItems().forEach(i -> i.setOwner(null));
+			Director director = session.get(Director.class, 1);
+			System.out.println(director);
+			List<Movie> movies = director.getMovies();
+		    System.out.println(movies);
 			// Committing changes from cache
 			session.getTransaction().commit();
 
