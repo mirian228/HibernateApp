@@ -19,7 +19,7 @@ public class Movie {
 	private int id;
 	@ManyToOne
 	@JoinColumn(name = "director_id", referencedColumnName = "director_id")
-	private Director directorId;
+	private Director director;
 	@Column(name = "name")
 	private String name;
 	@Column(name = "year_of_production")
@@ -31,17 +31,17 @@ public class Movie {
 		this.yearOfProduction = yearOfProduction;
 	}
 
-	public Movie(int id, Director directorId, String name, int yearOfProduction) {
+	public Movie(int id, Director director, String name, int yearOfProduction) {
 		super();
 		this.id = id;
-		this.directorId = directorId;
+		this.director = director;
 		this.name = name;
 		this.yearOfProduction = yearOfProduction;
 	}
 
-	public Movie(Director directorId, String name, int yearOfProduction) {
+	public Movie(Director director, String name, int yearOfProduction) {
 		super();
-		this.directorId = directorId;
+		this.director = director;
 		this.name = name;
 		this.yearOfProduction = yearOfProduction;
 	}
@@ -58,12 +58,12 @@ public class Movie {
 		this.id = id;
 	}
 
-	public Director getDirectorId() {
-		return directorId;
+	public Director getDirector() {
+		return director;
 	}
 
-	public void setDirectorId(Director directorId) {
-		this.directorId = directorId;
+	public void setDirector(Director director) {
+		this.director = director;
 	}
 
 	public String getName() {
@@ -86,8 +86,5 @@ public class Movie {
 	public String toString() {
 		return "Movie [id=" + id + ", name=" + name + ", yearOfProduction=" + yearOfProduction + "]";
 	}
-
-	
-
 
 }

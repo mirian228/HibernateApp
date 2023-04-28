@@ -29,10 +29,10 @@ public class App {
 			// Transaction Beginning
 			session.beginTransaction();
 
-			Director director = session.get(Director.class, 1);
+			Movie movie = session.get(Movie.class, 1);
+			System.out.println(movie);
+			Director director = movie.getDirector();
 			System.out.println(director);
-			List<Movie> movies = director.getMovies();
-		    System.out.println(movies);
 			// Committing changes from cache
 			session.getTransaction().commit();
 

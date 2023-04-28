@@ -25,7 +25,7 @@ public class Director {
 	@Column(name = "age")
 	private int age;
 
-	@OneToMany(mappedBy = "directorId")
+	@OneToMany(mappedBy = "director")
 	private List<Movie> movies;
 
 	public Director() {
