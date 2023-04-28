@@ -8,6 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
 @Entity
 @Table(name = "Principal")
 public class Principal {
@@ -22,6 +25,7 @@ public class Principal {
 	@Column(name = "age")
 	private int age;
 	@OneToOne(mappedBy = "principal")
+	@Cascade(CascadeType.SAVE_UPDATE)
 	private School school;
 
 	public Principal(String name, int age, School school) {

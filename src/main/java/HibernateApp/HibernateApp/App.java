@@ -32,13 +32,14 @@ public class App {
 		try {
 			// Transaction Beginning
 			session.beginTransaction();
-
-			School school = session.get(School.class, 1);
-			System.out.println(school);
-
-			Principal principal = school.getPrincipal();
-			System.out.println(principal);
-
+			
+			Principal principal = new Principal("Gio", 22);
+			School school = new School(1500, principal);
+			session.save(principal);
+			session.save(school);
+			
+			
+			
 			// Committing changes from cache
 			session.getTransaction().commit();
 

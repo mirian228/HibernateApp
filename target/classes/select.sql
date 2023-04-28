@@ -89,4 +89,6 @@ INSERT INTO School(school_number, principal_id) VALUES (131, 1);
 INSERT INTO School(school_number, principal_id) VALUES (18, 2);
 INSERT INTO School(school_number, principal_id) VALUES (39, 4);
 
+SELECT * FROM School;
+SELECT * FROM Principal;
 
