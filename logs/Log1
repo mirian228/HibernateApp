@@ -1586,3 +1586,85 @@ RETURNING *]
 16:29:24:709 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
 16:29:25:659 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
 16:29:27:598 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/hibernate_demo_db]
+17:05:00:409 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+17:05:00:414 [main] INFO  org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.driver_class=org.postgresql.Driver, hibernate.connection.password=****, hibernate.connection.username=postgres, hibernate.connection.url=jdbc:postgresql://localhost:5432/hibernate_demo_db, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true , hibernate.current_session_context_class=thread}
+17:05:00:574 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17:05:00:713 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+17:05:00:715 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [null] at URL [jdbc:postgresql://localhost:5432/hibernate_demo_db]
+17:05:00:715 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+17:05:00:716 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+17:05:00:720 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+17:05:00:906 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+17:05:01:256 [main] WARN  org.hibernate.mapping.RootClass - HHH000038: Composite-id class does not override equals(): HibernateApp.HibernateApp.model.Passport
+17:05:01:257 [main] WARN  org.hibernate.mapping.RootClass - HHH000039: Composite-id class does not override hashCode(): HibernateApp.HibernateApp.model.Passport
+17:05:01:857 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/hibernate_demo_db]
+17:12:38:584 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+17:12:38:590 [main] INFO  org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.driver_class=org.postgresql.Driver, hibernate.connection.password=****, hibernate.connection.username=postgres, hibernate.connection.url=jdbc:postgresql://localhost:5432/hibernate_demo_db, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true , hibernate.current_session_context_class=thread}
+17:12:38:746 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17:12:38:879 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+17:12:38:879 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [null] at URL [jdbc:postgresql://localhost:5432/hibernate_demo_db]
+17:12:38:880 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+17:12:38:880 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+17:12:38:883 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+17:12:39:071 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+17:12:39:405 [main] WARN  org.hibernate.mapping.RootClass - HHH000038: Composite-id class does not override equals(): HibernateApp.HibernateApp.model.Passport
+17:12:39:406 [main] WARN  org.hibernate.mapping.RootClass - HHH000039: Composite-id class does not override hashCode(): HibernateApp.HibernateApp.model.Passport
+17:12:39:837 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [50]
+17:12:39:838 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [Test cascading]
+17:12:39:848 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [9]
+17:12:39:858 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [12345]
+17:12:39:859 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [INTEGER] - [9]
+17:12:39:867 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/hibernate_demo_db]
+17:15:04:933 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+17:15:04:938 [main] INFO  org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.driver_class=org.postgresql.Driver, hibernate.connection.password=****, hibernate.connection.username=postgres, hibernate.connection.url=jdbc:postgresql://localhost:5432/hibernate_demo_db, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true , hibernate.current_session_context_class=thread}
+17:15:05:082 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17:15:05:217 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+17:15:05:218 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [null] at URL [jdbc:postgresql://localhost:5432/hibernate_demo_db]
+17:15:05:219 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+17:15:05:219 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+17:15:05:222 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+17:15:05:393 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+17:15:05:710 [main] WARN  org.hibernate.mapping.RootClass - HHH000038: Composite-id class does not override equals(): HibernateApp.HibernateApp.model.Passport
+17:15:05:711 [main] WARN  org.hibernate.mapping.RootClass - HHH000039: Composite-id class does not override hashCode(): HibernateApp.HibernateApp.model.Passport
+17:15:06:126 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [50]
+17:15:06:127 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [Test person]
+17:15:06:137 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [10]
+17:15:06:148 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [12345]
+17:15:06:149 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [INTEGER] - [10]
+17:15:06:156 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/hibernate_demo_db]
+17:16:08:737 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+17:16:08:744 [main] INFO  org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.driver_class=org.postgresql.Driver, hibernate.connection.password=****, hibernate.connection.username=postgres, hibernate.connection.url=jdbc:postgresql://localhost:5432/hibernate_demo_db, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true , hibernate.current_session_context_class=thread}
+17:16:08:940 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17:16:09:078 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+17:16:09:079 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [null] at URL [jdbc:postgresql://localhost:5432/hibernate_demo_db]
+17:16:09:080 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+17:16:09:080 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+17:16:09:082 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+17:16:09:276 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+17:16:09:647 [main] WARN  org.hibernate.mapping.RootClass - HHH000038: Composite-id class does not override equals(): HibernateApp.HibernateApp.model.Passport
+17:16:09:647 [main] WARN  org.hibernate.mapping.RootClass - HHH000039: Composite-id class does not override hashCode(): HibernateApp.HibernateApp.model.Passport
+17:16:10:173 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+17:16:10:181 [main] TRACE org.hibernate.type.descriptor.sql.BasicExtractor - extracted value ([person_i2_3_1_] : [INTEGER]) - [null]
+17:16:10:189 [main] TRACE org.hibernate.type.descriptor.sql.BasicExtractor - extracted value ([age2_4_0_] : [INTEGER]) - [35]
+17:16:10:190 [main] TRACE org.hibernate.type.descriptor.sql.BasicExtractor - extracted value ([name3_4_0_] : [VARCHAR]) - [Tom]
+17:16:10:228 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/hibernate_demo_db]
+17:16:10:229 [main] ERROR org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:postgresql://localhost:5432/hibernate_demo_db
+17:16:43:477 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+17:16:43:483 [main] INFO  org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.driver_class=org.postgresql.Driver, hibernate.connection.password=****, hibernate.connection.username=postgres, hibernate.connection.url=jdbc:postgresql://localhost:5432/hibernate_demo_db, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true , hibernate.current_session_context_class=thread}
+17:16:43:632 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17:16:43:762 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+17:16:43:763 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [null] at URL [jdbc:postgresql://localhost:5432/hibernate_demo_db]
+17:16:43:763 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+17:16:43:764 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+17:16:43:766 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+17:16:43:943 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+17:16:44:254 [main] WARN  org.hibernate.mapping.RootClass - HHH000038: Composite-id class does not override equals(): HibernateApp.HibernateApp.model.Passport
+17:16:44:255 [main] WARN  org.hibernate.mapping.RootClass - HHH000039: Composite-id class does not override hashCode(): HibernateApp.HibernateApp.model.Passport
+17:16:44:664 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [8]
+17:16:44:671 [main] TRACE org.hibernate.type.descriptor.sql.BasicExtractor - extracted value ([person_i2_3_1_] : [INTEGER]) - [8]
+17:16:44:676 [main] TRACE org.hibernate.type.descriptor.sql.BasicExtractor - extracted value ([age2_4_0_] : [INTEGER]) - [30]
+17:16:44:677 [main] TRACE org.hibernate.type.descriptor.sql.BasicExtractor - extracted value ([name3_4_0_] : [VARCHAR]) - [Test cascading]
+17:16:44:679 [main] TRACE org.hibernate.type.descriptor.sql.BasicExtractor - extracted value ([passport1_3_1_] : [INTEGER]) - [12345]
+17:16:44:687 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [8]
+17:16:44:688 [main] TRACE org.hibernate.type.descriptor.sql.BasicExtractor - extracted value ([passport1_3_0_] : [INTEGER]) - [12345]
+17:16:44:707 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/hibernate_demo_db]

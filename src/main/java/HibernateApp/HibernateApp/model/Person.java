@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.Cascade;
@@ -30,6 +31,11 @@ public class Person {
 	@Cascade({CascadeType.SAVE_UPDATE }) // This annotation allows save method to be cascaded
 	private List<Item> items;
 
+	@OneToOne(mappedBy = "person")
+	@Cascade(CascadeType.SAVE_UPDATE)
+	private Passport passport;
+	
+	
 	public Person() {
 		super();
 	}
@@ -77,6 +83,15 @@ public class Person {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	public Passport getPassport() {
+		return passport;
+	}
+
+	public void setPassport(Passport passport) {
+		this.passport = passport;
+		passport.setPerson(this);
 	}
 
 	public void addItem(Item item) {

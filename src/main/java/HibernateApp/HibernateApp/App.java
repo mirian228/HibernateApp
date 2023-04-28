@@ -7,6 +7,7 @@ import org.hibernate.cfg.Configuration;
 import HibernateApp.HibernateApp.model.Director;
 import HibernateApp.HibernateApp.model.Item;
 import HibernateApp.HibernateApp.model.Movie;
+import HibernateApp.HibernateApp.model.Passport;
 import HibernateApp.HibernateApp.model.Person;
 
 public class App {
@@ -18,6 +19,7 @@ public class App {
 		configuration.addAnnotatedClass(Item.class);
 		configuration.addAnnotatedClass(Movie.class);
 		configuration.addAnnotatedClass(Director.class);
+		configuration.addAnnotatedClass(Passport.class);
 		// Building session factory
 		SessionFactory sessionFactory = configuration.buildSessionFactory();
 		// Getting session
@@ -27,11 +29,10 @@ public class App {
 			// Transaction Beginning
 			session.beginTransaction();
 
-			Person person = new Person("Test cascading", 30);
-			person.addItem(new Item("Test cascading item1"));
-			person.addItem(new Item("Test cascading item2"));
-			person.addItem(new Item("Test cascading item3"));
-		
+			Person person = new Person("Test person", 50);
+			Passport passport = new Passport(12345);
+			
+			person.setPassport(passport);
 
 			session.save(person);
 

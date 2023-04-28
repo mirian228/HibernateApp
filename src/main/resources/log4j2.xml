@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN">
- <Properties>
-    <Property name="filename">./logs</Property>
-  </Properties>
+	<Properties>
+		<Property name="filename">./logs</Property>
+	</Properties>
 	<Appenders>
-		<RollingFile name="file" 
-		fileName="${filename}/Log1"
-		filePattern="${filename}/Log-%d{HH-mm-ss-SSS}.log">
+		<RollingFile name="file" fileName="${filename}/Log1"
+			filePattern="${filename}/Log-%d{HH-mm-ss-SSS}.log">
 			<PatternLayout>
-				<pattern>%d{HH:mm:ss:SSS} [%t] %-5level %logger{36} - %msg%n</pattern>
+				<pattern>%d{HH:mm:ss:SSS} [%t] %-5level %logger{36} - %msg%n
+				</pattern>
 			</PatternLayout>
 			<SizeBasedTriggeringPolicy size="1MB" />
 		</RollingFile>
 		<Console name="Console" target="SYSTEM_OUT">
-			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
 		</Console>
 	</Appenders>
 	<Loggers>
+		<logger name="org.hibernate.type.descriptor.sql" level="TRACE" />
 		<Root level="info">
 			<AppenderRef ref="Console" />
 			<AppenderRef ref="file" />

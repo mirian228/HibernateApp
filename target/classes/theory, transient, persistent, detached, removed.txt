@@ -5,3 +5,7 @@ But, both can be moved to Persistent state by associating them with session e.g.
 Similarly, you can move a detached entity to Persistent state by calling Session.update() or Session.saveOrUpdate(), or Session.merge() methods.
 
 Read more: https://javarevisited.blogspot.com/2017/04/difference-between-transient-persistent-and-detached-state-hibernate-java.html#ixzz80B0AqcWS
+
+
+#Owning Side
+It's a side which contains @JoinColumn annotation
