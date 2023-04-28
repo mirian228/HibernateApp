@@ -30,10 +30,9 @@ public class App {
 			// Transaction Beginning
 			session.beginTransaction();
 			
-			Director director = new Director("Billy Wilder", 96);
-			Movie movie = new Movie(director, "Schindler's List", 1993);
-			director.setMovies(new ArrayList<>(Collections.singletonList(movie)));
-			session.save(director);
+			Movie movie = session.get(Movie.class, 1);
+			Director director = session.get(Director.class, 2);
+			movie.setDirector(director);
 			session.save(movie);
 			
 			// Committing changes from cache
