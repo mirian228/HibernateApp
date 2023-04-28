@@ -25,11 +25,10 @@ public class App {
 			// Transaction Beginning
 			session.beginTransaction();
 			
-			Person person = session.get(Person.class, 3);
+			Item item = session.get(Item.class, 5);
+			System.out.println(item);
+			Person person = item.getOwner();
 			System.out.println(person);
-			List<Item> items = person.getItems();
-			System.out.println(items);
-			
 			
 			// Committing changes from cache
 			session.getTransaction().commit();
