@@ -1,6 +1,7 @@
 package HibernateApp.HibernateApp;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -24,16 +25,18 @@ public class App {
 		try {
 			// Transaction Beginning
 			session.beginTransaction();
-			
-			Item item = session.get(Item.class, 5);
-			System.out.println(item);
-			Person person = item.getOwner();
-			System.out.println(person);
-			
+
+			Person person = new Person("Test person", 30);
+
+			Item newItem = new Item("Item from hibernate 2", person);
+
+			person.setItems(new ArrayList<>(Collections.singletonList(newItem)));
+			session.save(person);
+			session.save(newItem);
+
 			// Committing changes from cache
 			session.getTransaction().commit();
-			
-			
+
 		} finally {
 			// Closing session factory
 			sessionFactory.close();
