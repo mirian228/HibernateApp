@@ -45,6 +45,8 @@ public class Movie {
 		this.name = name;
 		this.yearOfProduction = yearOfProduction;
 	}
+	
+	
 
 	public Movie() {
 		super();
