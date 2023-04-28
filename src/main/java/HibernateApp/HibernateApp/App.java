@@ -1,6 +1,7 @@
 package HibernateApp.HibernateApp;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -28,11 +29,13 @@ public class App {
 		try {
 			// Transaction Beginning
 			session.beginTransaction();
-
-			Director director = session.get(Director.class, 1);
-			Movie movie = new Movie(director, "Law Obidient citizen",  2004);
-			director.getMovies().add(movie);
+			
+			Director director = new Director("Billy Wilder", 96);
+			Movie movie = new Movie(director, "Schindler's List", 1993);
+			director.setMovies(new ArrayList<>(Collections.singletonList(movie)));
+			session.save(director);
 			session.save(movie);
+			
 			// Committing changes from cache
 			session.getTransaction().commit();
 
