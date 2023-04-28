@@ -10,6 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
 @Entity
 @Table(name = "Person")
 public class Person {
@@ -23,6 +26,7 @@ public class Person {
 	private int age;
 
 	@OneToMany(mappedBy = "owner")
+	@Cascade(CascadeType.SAVE_UPDATE) // This annotation allows save method to be cascaded
 	private List<Item> items;
 
 	public Person() {

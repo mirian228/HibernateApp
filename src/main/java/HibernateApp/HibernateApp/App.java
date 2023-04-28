@@ -29,14 +29,15 @@ public class App {
 		try {
 			// Transaction Beginning
 			session.beginTransaction();
-			
-			Director director = session.get(Director.class, 1);
-			
-			Movie movie = session.get(Movie.class, 2);
-			
-			
-			
-			
+
+			Person person = new Person("Test cascading", 30);
+
+			Item item = new Item("Test cascading item", person);
+
+			person.setItems(new ArrayList<>(Collections.singletonList(item)));
+
+			session.save(person);
+
 			// Committing changes from cache
 			session.getTransaction().commit();
 
