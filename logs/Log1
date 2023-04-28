@@ -1684,3 +1684,19 @@ RETURNING *]
 17:48:00:066 [main] TRACE org.hibernate.type.descriptor.sql.BasicExtractor - extracted value ([principa3_6_1_] : [INTEGER]) - [1]
 17:48:00:067 [main] TRACE org.hibernate.type.descriptor.sql.BasicExtractor - extracted value ([school_n2_6_1_] : [INTEGER]) - [131]
 17:48:00:085 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/hibernate_demo_db]
+17:48:51:014 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+17:48:51:020 [main] INFO  org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.driver_class=org.postgresql.Driver, hibernate.connection.password=****, hibernate.connection.username=postgres, hibernate.connection.url=jdbc:postgresql://localhost:5432/hibernate_demo_db, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true , hibernate.current_session_context_class=thread}
+17:48:51:204 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17:48:51:360 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+17:48:51:361 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [null] at URL [jdbc:postgresql://localhost:5432/hibernate_demo_db]
+17:48:51:362 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+17:48:51:362 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+17:48:51:366 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+17:48:51:592 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+17:48:52:552 [main] TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+17:48:52:560 [main] TRACE org.hibernate.type.descriptor.sql.BasicExtractor - extracted value ([id1_6_1_] : [INTEGER]) - [2]
+17:48:52:566 [main] TRACE org.hibernate.type.descriptor.sql.BasicExtractor - extracted value ([age2_5_0_] : [INTEGER]) - [28]
+17:48:52:567 [main] TRACE org.hibernate.type.descriptor.sql.BasicExtractor - extracted value ([name3_5_0_] : [VARCHAR]) - [Bob]
+17:48:52:569 [main] TRACE org.hibernate.type.descriptor.sql.BasicExtractor - extracted value ([principa3_6_1_] : [INTEGER]) - [1]
+17:48:52:569 [main] TRACE org.hibernate.type.descriptor.sql.BasicExtractor - extracted value ([school_n2_6_1_] : [INTEGER]) - [131]
+17:48:52:588 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/hibernate_demo_db]

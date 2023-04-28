@@ -35,7 +35,8 @@ public class App {
 
 			Principal principal = session.get(Principal.class, 1);
 			System.out.println(principal);
-
+			School school = principal.getSchool();
+			System.out.println(school);
 			// Committing changes from cache
 			session.getTransaction().commit();
 
