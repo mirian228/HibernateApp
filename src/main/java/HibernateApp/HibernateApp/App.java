@@ -1,9 +1,14 @@
 package HibernateApp.HibernateApp;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import HibernateApp.HibernateApp.model.Actor;
 import HibernateApp.HibernateApp.model.Director;
 import HibernateApp.HibernateApp.model.Item;
 import HibernateApp.HibernateApp.model.Movie;
@@ -24,27 +29,31 @@ public class App {
 		configuration.addAnnotatedClass(Passport.class);
 		configuration.addAnnotatedClass(Principal.class);
 		configuration.addAnnotatedClass(School.class);
+		configuration.addAnnotatedClass(Actor.class);
 		// Building session factory
 		SessionFactory sessionFactory = configuration.buildSessionFactory();
-		// Getting session
-		Session session = sessionFactory.getCurrentSession();
 
-		try {
-			// Transaction Beginning
+		try (sessionFactory) {
+			// Getting session
+			Session session = sessionFactory.getCurrentSession();
+
+			// Beginning transaction
 			session.beginTransaction();
-			
-			School school = session.get(School.class, 2);
-			Principal principal = new Principal("Changed Principal", 35);
-			session.save(principal);
-			school.setPrincipal(principal);
-			session.save(school);
-			
-			// Committing changes from cache
-			session.getTransaction().commit();
 
-		} finally {
-			// Closing session factory
-			sessionFactory.close();
+			Movie movie = new Movie("Pulp Fiction", 1994);
+			Actor actor1 = new Actor("Harvey Keitel", 81);
+			Actor actor2 = new Actor("Samuel L. Jackson", 72);
+
+			movie.setActors(new ArrayList<>(List.of(actor1, actor2)));
+			actor1.setMovies(new ArrayList<>(Collections.singletonList(movie)));
+			actor2.setMovies(new ArrayList<>(Collections.singletonList(movie)));
+
+			session.save(movie);
+			session.save(actor1);
+			session.save(actor2);
+
+			// Committing changes
+			session.getTransaction().commit();
 		}
 
 	}

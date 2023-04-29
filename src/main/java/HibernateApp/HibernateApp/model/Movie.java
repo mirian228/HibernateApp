@@ -1,11 +1,14 @@
 package HibernateApp.HibernateApp.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -24,6 +27,8 @@ public class Movie {
 	private String name;
 	@Column(name = "year_of_production")
 	private int yearOfProduction;
+	@ManyToMany(mappedBy = "movies")
+	private List<Actor> actors;
 
 	public Movie(String name, int yearOfProduction) {
 		super();
@@ -45,11 +50,17 @@ public class Movie {
 		this.name = name;
 		this.yearOfProduction = yearOfProduction;
 	}
-	
-	
 
 	public Movie() {
 		super();
+	}
+
+	public List<Actor> getActors() {
+		return actors;
+	}
+
+	public void setActors(List<Actor> actors) {
+		this.actors = actors;
 	}
 
 	public int getId() {
